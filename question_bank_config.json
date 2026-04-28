@@ -1,0 +1,15 @@
+[
+    {
+        "name": "本地题库",
+        "url": "http://127.0.0.1:5000/",
+        "method": "get",
+        "type": "GM_xmlhttpRequest",
+        "contentType": "json",
+        "data": {
+            "title": "${title}",
+            "options": "${options}",
+            "type": "${type}"
+        },
+        "handler": "return (res)=>res.code === 0 ? [res.data.answer, undefined] : [res.data.question,res.data.answer]"
+    }
+]
